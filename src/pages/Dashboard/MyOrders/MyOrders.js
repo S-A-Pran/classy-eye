@@ -16,7 +16,7 @@ const MyOrders = () => {
   const [isDeleted, setIsDeleted] = useState(false);
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    fetch(`https://limitless-everglades-80966.herokuapp.com/${user?.email}`)
+    fetch(`https://limitless-everglades-80966.herokuapp.com/orders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [isDeleted, user.email]);
